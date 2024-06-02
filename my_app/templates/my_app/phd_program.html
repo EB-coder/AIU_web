@@ -1,0 +1,48 @@
+<!-- my_app/templates/my_app/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PHD_Master website{% endblock %}</title>
+    {% load static %}
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="{% static 'my_app/css/nav.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'my_app/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'my_app/css/phd_program.css' %}">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&family=Mulish:ital@0;1&display=swap" rel="stylesheet">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        {% include 'my_app/includes/nav.html' %}
+        {% block text_box %}
+    <div class="text-box">
+        <h1>Ala-Too PHD program</h1><br>
+        <p>Endless Possibilities, Endless Opportunities.</p>
+        <a href="#aiu_history" class="visit-btn">More about AIU</a>
+    </div>
+    {% endblock %}
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock %}
+    </main>
+    <footer>
+        {% include 'my_app/includes/footer.html' %}
+    </footer>
+    
+    <script src="{% static 'my_app/js/nav.js' %}"></script>
+
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

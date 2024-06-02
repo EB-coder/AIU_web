@@ -1,0 +1,73 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'my_app/css/nav.css' %}">  
+    <section class="header" id="header">
+        <nav>
+            <a href="{% url 'home' %}">
+                <img src="{{ MEDIA_URL }}logo_alatoo3.png" alt="logo_alatoo">
+            </a> 
+            <div class="nav-links" id="navLinks">
+              <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="" data-lang="about-faculty">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-lang="about-programs">Programs</a>
+                        <div class="dropdown-content">
+                            <a href="{% url 'phd_program' %}" data-lang="phd-programs">PHD program</a>
+                            <a href="#" data-lang="master-program">Master-program</a>
+                        </div>
+                    </li>
+                    <li><a href="" data-lang="for-students">Research</a></li>
+                    <li><a href="" data-lang="dual-degree">Dual-degree</a></li>
+                    <li><a href="" data-lang="apply">Apply</a></li>
+                </ul>
+            </div>
+            <div class="search-container">
+              <form class="form" role="form" action="" method="get" style="margin-right: 10px;">
+                <div class="input-group">
+                  <input type="text" placeholder="Search the site" class="form-control inpsearch" name="search" value="" style="background-color: rgb(224, 231, 231);">
+                  <span class="input-group-btn">
+                    <button type="submit" class="btn btn-primary butsearch"><i class="fas fa-search"></i></button>
+                  </span>
+                </div>                
+              </form>
+              <a href="" class="btn donationbutton" style="margin-left: 20px; border-color: #fff;color: #fff;margin-bottom: 7px;">
+                Support AIU
+              </a>
+              <div class="lang-menu">
+                <div class="selected-lang">
+                  <img src="https://flagsapi.com/US/flat/32.png" alt="English">
+                </div>
+                <ul>
+                  <li>
+                    <a href="#" class="us">
+                      <img src="https://flagsapi.com/US/flat/32.png" alt="English">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="ru">
+                      <img src="https://flagsapi.com/RU/flat/32.png" alt="Russian">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="kg">
+                      <img src="https://flagsapi.com/KG/flat/32.png" alt="Kyrgyz">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div> 
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+      <!-- <div class="text-box">
+        <h1>Ala-Too International University</h1><br>
+        <p>Endless Possibilities, Endless Opportunities.</p>
+        <a href="#aiu_history" class="visit-btn">More about AIU</a>
+      </div> -->
+    </section>
+
+<script src="{% static 'my_app/js/nav.js' %}"></script>
+<script src="https://kit.fontawesome.com/91f5e217d8.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

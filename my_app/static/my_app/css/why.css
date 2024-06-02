@@ -1,0 +1,47 @@
+.why-choose {
+    padding: 50px 0;
+    background-color: #ffffff;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.reasons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reason {
+    flex-basis: calc(25% - 20px);
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+}
+
+.reason i {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.reason h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.reason p {
+    font-size: 16px;
+}
