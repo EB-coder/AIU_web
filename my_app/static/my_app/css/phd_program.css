@@ -1,9 +1,30 @@
-.header{
-    min-height: 100vh;
-    width: 100%;
-    background-image: none;
-    background-position: center;
-    background-size: cover;
-    position:relative;
-    background-color: #fff;
+.top-bar{
+    padding: 20px 6%;
+    background-color: rgb(218, 217, 210);
+    color: #2d2652;
 }
+.under{
+    height: 5px;
+    background-color: #d40e1e;
+}
+
+.info-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#datetime {
+    font-size: 14px;
+    color: #666;
+}
+
+
