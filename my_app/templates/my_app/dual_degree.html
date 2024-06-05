@@ -1,0 +1,220 @@
+<!-- my_app/templates/my_app/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PHD_Master website{% endblock %}</title>
+    {% load static %}
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+    <link rel="stylesheet" href="{% static 'my_app/css/nav2.css' %}">
+    <link rel="stylesheet" href="{% static 'my_app/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'my_app/css/dual_degree.css' %}">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&family=Mulish:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        {% include 'my_app/includes/nav2.html' %}
+    </header>
+    <main>
+        {% block content %}
+        <div class="slider">
+            <!-- list Items -->
+            <div class="list">
+                <div class="item active">
+                    <img src="">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>North AU</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>solbridge</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>INha</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>Oxford</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="">
+                    <div class="content">
+                        <p>design</p>
+                        <h2>American</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- button arrows -->
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- thumbnail -->
+            <div class="thumbnail">
+                <div class="item active">
+                    <img src="/media/north_america.jpg">
+                    <div class="content">
+                        NAU
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/media/solbridge.jpg">
+                    <div class="content">
+                        SU
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/media/inha.jpg">
+                    <div class="content">
+                        INHU
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/media/oxford1.jpg">
+                    <div class="content">
+                        OXFDU
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="/media/america1.png">
+                    <div class="content">
+                        AU
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="info-dual">
+            <p>International Exchange Programs<br>
+            AMU students have a unique opportunity to graduate from<br> 
+            the university with two diplomas - an IUA diploma and an international diploma with international accreditation from one of the four international universities:</p>
+        </div>
+        <section class="doc-section">
+            <div class="program-list">
+                <h2>4 universities</h2>
+                <div>
+                    <i class="fas fa-star get" style="color: #2d2652;"></i>
+                    <p>Hof University of Applied Sciences (Germany) </p>
+                </div>
+                <div>
+                    <i class="fas fa-star get" style="color: #2d2652;"></i>
+                    <p>SolBridge International School of Business</p>
+                </div>
+                <div>
+                    <i class="fas fa-star get" style="color: #2d2652;"></i>
+                    <p>Inha University</p>
+                </div>
+                <div>
+                    <i class="fas fa-star get" style="color: #2d2652;"></i>
+                    <p>North American University</p>
+                </div>
+            </div>
+            <div class="info2-dual">
+                <p>Thanks to the double international diploma system with international accreditation, AMU graduates <br>
+                    successfully work in leading companies and organizations around the world</p>
+            </div>
+        </section>
+        <section class="gallery min-vh-100">
+            <div class="container-lg">
+               <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+                  <div class="col">
+                     <img src="/media/facebook.jpg" class="gallery-item" alt="gallery">
+                  </div>
+                  <div class="col">
+                     <img src="/media/genelec.jpg" class="gallery-item" alt="gallery">
+                  </div>
+                  <div class="col">
+                     <img src="/media/booking.jpg" class="gallery-item" alt="gallery">
+                  </div>
+                  <div class="col">
+                     <img src="/media/baylor.png" class="gallery-item" alt="gallery">
+                  </div>
+                  <div class="col">
+                     <img src="/media/genpact.jpg" class="gallery-item" alt="gallery">
+                  </div>
+                  <div class="col">
+                     <img src="/media/epam.jpg" class="gallery-item" alt="gallery">
+                  </div>
+               </div>
+            </div>
+         </section>
+       
+       <!-- Modal -->
+       <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered modal-lg">
+           <div class="modal-content">
+             <div class="modal-header">
+               <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                <img src="img/1.jpg" class="modal-img" alt="modal img">
+             </div>
+           </div>
+         </div>
+       </div>
+
+
+        {% include 'my_app/includes/footer.html' %}
+        {% endblock %}
+        
+      
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{% static 'my_app/js/nav.js' %}"></script>
+    <script src="{% static 'my_app/js/dual_degree.js' %}"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/91f5e217d8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>
