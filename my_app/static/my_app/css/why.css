@@ -1,7 +1,7 @@
+/* Общие стили */
 .why-choose {
     padding: 50px 0;
     background-color: #ffffff;
-    /* font-family: 'Montserrat', sans-serif; */
 }
 
 .container {
@@ -19,6 +19,7 @@ h2 {
 .reasons {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap; /* Добавлено свойство для обертывания элементов */
 }
 
 .reason {
@@ -26,6 +27,7 @@ h2 {
     text-align: center;
     padding: 20px;
     transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Добавлено свойство для расстояния между элементами */
 }
 
 .reason:hover {
@@ -44,4 +46,29 @@ h2 {
 
 .reason p {
     font-size: 16px;
+}
+
+/* Медиа-запросы для адаптивного дизайна */
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .reason {
+        flex-basis: calc(33.33% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .reason {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .reason {
+        flex-basis: calc(100% - 20px);
+    }
 }

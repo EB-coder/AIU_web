@@ -1,0 +1,88 @@
+<!-- my_app/templates/my_app/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}PHD_Master website{% endblock %}</title>
+    {% load static %}
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+    <link rel="stylesheet" href="{% static 'my_app/css/nav2.css' %}">
+    <link rel="stylesheet" href="{% static 'my_app/css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'my_app/css/research.css' %}">
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&family=Mulish:ital@0;1&display=swap" rel="stylesheet">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        {% include 'my_app/includes/nav2.html' %}
+    </header>
+    <main>
+        {% block content %}
+        <section class="home">
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-controls">
+              <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active" style="background-image:url('/media/eco-fest.jpg')"></li>
+                <li data-target="#carousel" data-slide-to="1" style="background-image:url('/media/conf2.jpg')"></li>
+                <li data-target="#carousel" data-slide-to="2" style="background-image:url('/media/girls.jpg')"></li>
+                
+              </ol>
+              <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+               <img src="/media/left-arrow.svg" alt="Prev"> 
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+              <img src="/media/right-arrow.svg" alt="Next">
+            </a>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active" style="background-image:url('/media/eco-fest.jpg')">
+                <div class="container">
+                   <h2>Research name</h2>
+                   <p>Web Developer</p>
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image:url('/media/conf2.jpg')">
+                <div class="container">
+                   <h2>Research name</h2>
+                   <p>Web Developer</p>
+                </div>
+              </div>
+              <div class="carousel-item" style="background-image:url('/media/girls.jpg')">
+                <div class="container">
+                   <h2>Research name</h2>
+                   <p>Web Developer</p>
+                </div>
+              </div>
+            </div>
+          </div>
+           </section>
+        
+        
+
+        {% include 'my_app/includes/footer.html' %}
+        {% endblock %}
+      
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="{% static 'my_app/js/nav.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/91f5e217d8.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+
+
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

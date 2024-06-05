@@ -99,7 +99,7 @@ nav img{
 nav .fa{
     display: none;
 }
-@media(max-width: 700px){
+@media(max-width: 768px){
     .text-box h1{
         font-size: 16px;
     }
@@ -116,6 +116,7 @@ nav .fa{
         text-align: left;
         z-index: 2;
         transition: 1s;
+        
     }
     nav .fa{
         display: block;
@@ -127,7 +128,23 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
+    .lang-menu{
+      display: none;
+    }
+    .dropdown-content{
+      display: block;
+      position:static;
+      background-color: transparent;
+    }
+    .search-container form{
+      display: none;
+    }
+    .search-container a{
+      margin-top: -12px;
+    }
+    
 }
+
 /* -----------language------------- */
 
 .lang-menu {
@@ -139,7 +156,7 @@ nav .fa{
     display: flex;
     align-items: center;
     line-height: 2;
-    width: 32px; /* ширина соответствует размеру флага */
+    width: 32px;
   }
   .selected-lang img {
     width: 32px;
@@ -187,6 +204,7 @@ nav .fa{
     height: 30px;
     padding: 10px;
     margin-right: 10px;
+    margin-left: 10px;
     border: 1px solid #ffffff;
     border-radius: 4px;
   }
@@ -213,6 +231,7 @@ nav .fa{
         width: 50px;
         height: 20px;
         border-radius: 2px;
+        
     }
     button{
         border-radius: 2px;

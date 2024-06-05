@@ -89,7 +89,7 @@ nav img{
 nav .fa{
     display: none;
 }
-@media(max-width: 700px){
+@media(max-width: 768px){
     .text-box h1{
         font-size: 16px;
     }
@@ -117,6 +117,22 @@ nav .fa{
     .nav-links ul{
         padding: 30px;
     }
+    .lang-menu{
+      display: none;
+    }
+    .dropdown-content{
+      display: block;
+      position:static;
+      background-color: transparent;
+    }
+    .search-container form{
+      display: none;
+    }
+    .search-container a{
+      margin-top: -12px;
+    }
+   
+
 }
 /* -----------language------------- */
 
