@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ngrok-v3-stable-windows-amd64">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/media/uploads/ngrok-v3-stable-windows-amd64.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
