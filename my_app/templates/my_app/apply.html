@@ -64,24 +64,30 @@
             <div class="form">
                 <h4>Let's Connect and Apply</h4>
                 <p>Submit your all information and documentation below. </p>
-                <div class="form-row">
-                    <input type="text" placeholder="Your Name">
-                    <input type="text" placeholder="Email">
+                <div class="form">
+                    <h4>Let's Connect and Apply</h4>
+                    <p>Submit your all information and documentation below.</p>
+                    <form method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <input type="text" name="name" placeholder="Your Name">
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="form-col">
+                            <input type="text" name="subject" placeholder="Subject">
+                        </div>
+                        <div class="form-col">
+                            <label for="file">Select file:</label>
+                            <input type="file" id="file" name="file" accept=".pdf, .doc, .docx, .png, .jpeg, .jpg, .zip">
+                        </div>
+                        <div class="form-col">
+                            <textarea name="message" id="message" cols="30" rows="8" placeholder="How can we help?"></textarea>
+                        </div>
+                        <div class="form-col">
+                            <button type="submit">Apply</button>
+                        </div>
+                    </form>
                 </div>
-                <div class="form-col">
-                    <input type="text" placeholder="Subject">
-                </div>
-                <div class="form-col">
-                    <label for="file">Select file:</label>
-                    <input type="file" id="file" name="file" accept=".pdf, .doc, .docx, .jpg, .png">
-                </div>
-                <div class="form-col">
-                    <textarea name="" id="" cols="30" rows="8" placeholder="How can we help?"></textarea>
-                </div>
-                <div class="form-col">
-                    <button>Apply</button>
-                </div>
-            </div>
         </section>
         <section id="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2706.7572897247464!2d74.67965102390896!3d42.856251916123625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb6c95311ea6b%3A0x7023946675e4c5a9!2z0JzQtdC20LTRg9C90LDRgNC-0LTQvdGL0Lkg0YPQvdC40LLQtdGA0YHQuNGC0LXRgiDQkNC70LAt0KLQvtC-!5e0!3m2!1sru!2skg!4v1717462406516!5m2!1sru!2skg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
